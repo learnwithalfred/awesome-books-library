@@ -81,9 +81,7 @@ Give a ⭐️ if you like this project!
 
 ## Acknowledgments
 
-- Hat tip to anyone whose code was used
-- Inspiration
-- etc
+- Project Design and inspiration from [Microverse Bootcamp](https://www.microverse.org)
 
 ## 📝 License
 
