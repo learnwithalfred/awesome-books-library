@@ -1,4 +1,4 @@
-![Awesome Books Project](assets/awesome_books_full_website.png)
+![Awesome Books Project](assets/img/awesome_books_full_website.png)
 
 # Awesome Books Library
 
