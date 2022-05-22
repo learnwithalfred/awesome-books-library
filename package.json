@@ -1,0 +1,41 @@
+{
+  "name": "awesome-books-library",
+  "version": "1.0.0",
+  "description": "Awesome books is a simple website that displays a list of books and allows you to add and remove books from that list",
+  "main": "assets/js/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/learnwithalfred/awesome-books-library.git"
+  },
+  "keywords": [
+    "Books",
+    "awesome",
+    "Alfred",
+    "alfredboateng",
+    "Javascript",
+    "css",
+    "html",
+    "design",
+    "Microverse"
+  ],
+  "author": "https://alfredboateng-portfolio.vercel.app/",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-eslint": "^10.1.0",
+    "eslint": "^7.32.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.26.0",
+    "hint": "^6.2.0",
+    "stylelint": "^13.13.1",
+    "stylelint-config-standard": "^21.0.0",
+    "stylelint-csstree-validator": "^1.9.0",
+    "stylelint-scss": "^3.21.0"
+  },
+  "bugs": {
+    "url": "https://github.com/learnwithalfred/awesome-books-library/issues"
+  },
+  "homepage": "https://github.com/learnwithalfred/awesome-books-library#readme"
+}
