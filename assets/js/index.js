@@ -1,17 +1,46 @@
 import data from './data.js';
+import addBook from './add-book.js';
 
-const bookList = document.querySelector('.book-list');
+const title = document.querySelector('#title');
+const author = document.querySelector('#author');
+const form = document.querySelector('.form');
+const ul = document.querySelector('.book-list');
 
-const displayBooks = (arr) => {
-  for (let i = arr.length - 1; i >= 0; i -= 1) {
-    const fetch = document.querySelector('.book-list').innerHTML;
+const getBooks = (myBooksArr = []) => {
+  const booksArr = myBooksArr.map((book) => {
+    const li = document.createElement('li');
+    const removeBtn = document.createElement('button');
+    removeBtn.innerText = 'Remove Book';
+    ul.append(li);
+    li.innerText = `${book.title} by ${book.author}`;
+    li.append(removeBtn);
+    removeBtn.setAttribute('id', book.id);
+    removeBtn.setAttribute('class', 'remove-button');
 
-    bookList.innerHTML = `<li class="book-item">
-          <span class="book">${data[i].title} by ${data[i].author}</span>
-          <button type="button" class="remove-book">Remove</button>
-        </li>
-              <hr />
-${fetch}`;
-  }
+    // remove element on click
+    removeBtn.addEventListener('click', (event) => {
+      for (let i = 0; i < myBooksArr.length; i += 1) {
+        if (myBooksArr[i].id === event.target.id) {
+          myBooksArr.splice(i, 1);
+        }
+      }
+      return getBooks(myBooksArr);
+    });
+
+    // return created elements
+    return {
+      li,
+      removeBtn,
+    };
+  });
+  return booksArr;
 };
-displayBooks(data);
+
+form.addEventListener('submit', (e) => {
+  e.preventDefault();
+  addBook(data, title.value, author.value);
+
+  getBooks(data);
+});
+
+getBooks(data);
