@@ -62,9 +62,9 @@
 
 👤 **Author2**
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+- GitHub: [@rebel216](https://github.com/rebel216)
+- Twitter: [@rebel216](https://twitter.com/rebel216)
+- LinkedIn: [LinkedIn](https://linkedin.com/in/rebel216)
 
 ## 🤝 Contributing
 
