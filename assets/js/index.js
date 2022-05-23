@@ -53,9 +53,11 @@ const getBooks = (myBooksArr) => {
       for (let i = 0; i < myBooksArr.length; i += 1) {
         if (myBooksArr[i].id === event.target.id) {
           myBooksArr.splice(i, 1);
+          window.location.reload();
+          return saveToLocalStorage(myBooksArr);
         }
       }
-      return getBooks(myBooksArr);
+      return false;
     });
 
     // return created elements
