@@ -23,7 +23,7 @@ const generateId = (length = 10) => {
   return result;
 };
 
-const savedData = () => {
+const savedBooks = () => {
   const rawBooksData = localStorage.getItem('bookStoreData');
   let books;
   if (rawBooksData) {
@@ -34,8 +34,8 @@ const savedData = () => {
   }
   return books;
 };
-savedData();
-const booksData = savedData();
+
+const booksData = savedBooks();
 
 const getBooks = (myBooksArr) => {
   const booksArr = myBooksArr.map((book) => {
