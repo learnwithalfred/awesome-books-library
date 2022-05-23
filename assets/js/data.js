@@ -1,4 +1,4 @@
-const data = [
+const initialData = [
   {
     id: '176543',
     title: "Santa's Apprentice",
@@ -16,4 +16,4 @@ const data = [
   },
 ];
 
-export default data;
+export default initialData;

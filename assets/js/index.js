@@ -1,4 +1,4 @@
-import data from './data.js';
+import initialData from './data.js';
 import addBook from './add-book.js';
 
 const title = document.querySelector('#title');
@@ -6,7 +6,38 @@ const author = document.querySelector('#author');
 const form = document.querySelector('.form');
 const ul = document.querySelector('.book-list');
 
-const getBooks = (myBooksArr = []) => {
+const saveToLocalStorage = (data) => {
+  const booksString = JSON.stringify(data);
+  localStorage.setItem('bookStoreData', booksString);
+  return true;
+};
+
+// generate unique id
+const generateId = (length = 10) => {
+  let result = '';
+  const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+  const charactersLength = characters.length;
+  for (let i = 0; i < length; i += 1) {
+    result += characters.charAt(Math.floor(Math.random() * charactersLength));
+  }
+  return result;
+};
+
+const savedData = () => {
+  const rawBooksData = localStorage.getItem('bookStoreData');
+  let books;
+  if (rawBooksData) {
+    books = JSON.parse(rawBooksData);
+  } else {
+    books = initialData;
+    saveToLocalStorage(books);
+  }
+  return books;
+};
+savedData();
+const booksData = savedData();
+
+const getBooks = (myBooksArr) => {
   const booksArr = myBooksArr.map((book) => {
     const li = document.createElement('li');
     const removeBtn = document.createElement('button');
@@ -38,9 +69,9 @@ const getBooks = (myBooksArr = []) => {
 
 form.addEventListener('submit', (e) => {
   e.preventDefault();
-  addBook(data, title.value, author.value);
-
-  getBooks(data);
+  addBook(booksData, title.value, author.value, generateId());
+  window.location.reload();
+  return saveToLocalStorage(booksData);
 });
 
-getBooks(data);
+getBooks(booksData);
