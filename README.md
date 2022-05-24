@@ -1,4 +1,4 @@
-![Awesome Books Project](assets/awesome_books_full_website.png)
+![Awesome Books Project](assets/img/awesome_books_full_website.png)
 
 # Awesome Books Library
 
@@ -9,13 +9,10 @@
 - HTML
 - CSS
 - JAVASCRIPT
--
 
 ## Getting Started
 
 **To get a local copy up and running follow these simple example steps.**
-
-To get a local copy up and running follow these simple example steps.
 
 ### Prerequisites
 
@@ -29,31 +26,6 @@ To get a local copy up and running follow these simple example steps.
 - Change directory into the project folder
 - Open project with text editor to view changes
 
-### Install
-
-- Install dev dependencies
-- If you are using vscode text editor, you can install [Live Sass Compiler](https://marketplace.visualstudio.com/items?itemName=ritwickdey.live-sass)
-  - Then update your location of SCSS main file in `vscode` > `settings.json` file.
-  ```
-  "liveSassCompile.settings.formats": [
-    {
-      "format": "expanded",
-      "extensionName": ".css",
-      "savePath": "/dist/css"
-    }
-  ],
-  ```
-- Please make sure you are compiling scss to see the styles working
-
-- Run the code using [live server](https://www.google.com/search?client=safari&rls=en&q=live+server&ie=UTF-8&oe=UTF-8)
-
-## Live Demo (if available)
-
-[Live Demo Link](https://livedemo.com)
-
-### Run tests
-
-### Deployment
 
 ## Authors
 
@@ -65,9 +37,9 @@ To get a local copy up and running follow these simple example steps.
 
 👤 **Author2**
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+- GitHub: [@rebel216](https://github.com/rebel216)
+- Twitter: [@rebel216](https://twitter.com/rebel216)
+- LinkedIn: [LinkedIn](https://linkedin.com/in/rebel216)
 
 ## 🤝 Contributing
 
@@ -81,9 +53,7 @@ Give a ⭐️ if you like this project!
 
 ## Acknowledgments
 
-- Hat tip to anyone whose code was used
-- Inspiration
-- etc
+- Project Design and inspiration from [Microverse Bootcamp](https://www.microverse.org)
 
 ## 📝 License
 
