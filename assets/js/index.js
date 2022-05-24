@@ -9,8 +9,7 @@ const author = document.querySelector('#author');
 // generate unique id
 const generateId = (length = 10) => {
   let result = '';
-  const characters =
-    'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+  const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
   const charactersLength = characters.length;
   for (let i = 0; i < length; i += 1) {
     result += characters.charAt(Math.floor(Math.random() * charactersLength));
@@ -45,13 +44,6 @@ class Book {
 }
 
 const booksData = new BookList();
-
-function getBook() {
-  const book = new Book(title.value, author.value);
-  title.value = '';
-  author.value = '';
-  return book;
-}
 
 function displayBooks(book) {
   const ul = document.querySelector('.book-list');
