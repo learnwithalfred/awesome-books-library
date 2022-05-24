@@ -1,5 +1,7 @@
 /* eslint-disable max-classes-per-file */
 
+import initialData from './data.js';
+
 const form = document.querySelector('#form');
 const title = document.querySelector('#title');
 const author = document.querySelector('#author');
@@ -65,16 +67,20 @@ function displayBooks(book) {
 }
 
 form.addEventListener('submit', (e) => {
-  const newBook = getBook();
-  booksData.addBook(newBook);
-  displayBooks(newBook);
   e.preventDefault();
+  if (title.value && author.value) {
+    const newBook = new Book(title.value, author.value);
+    booksData.addBook(newBook);
+    displayBooks(newBook);
+  }
+  return false;
 });
 
 window.onload = () => {
   booksData.data = JSON.parse(localStorage.getItem('bookStoreData' || '[]'));
   if (booksData.data === null) {
-    booksData.data = [];
+    booksData.data = initialData;
+    localStorage.setItem('bookStoreData', JSON.stringify(initialData));
     return;
   }
 
