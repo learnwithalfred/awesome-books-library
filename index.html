@@ -13,16 +13,21 @@
   </head>
   <body>
     <section class="home">
-      <h1>Awesome books</h1>
+      <div class="header">
+        <h1>Awesome books Library</h1>
+      </div>
 
-      <ul class="book-list"></ul>
-
-      <form class="form" action="/">
-        <input type="text" name="title" id="title" /><br />
-        <input type="text" name="author" id="author" /><br />
-        <input type="submit" value="Add" id="add-button" />
-      </form>
+      <div class="book-list">
+        <ul class="book-list"></ul>
+      </div>
+      <div class="form">
+        <form id="form" action="/">
+          <input type="text" name="title" id="title" />
+          <input type="text" name="author" id="author" />
+          <input type="submit" value="Add" id="add-button" />
+        </form>
+      </div>
     </section>
-    <script type="module" src="assets/js/book.js"></script>
+    <script type="module" src="assets/js/index.js"></script>
   </body>
 </html>
