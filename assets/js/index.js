@@ -24,6 +24,8 @@ class BookList {
 
   addBook(book) {
     this.data.push(book);
+    title.value = '';
+    author.value=''
     localStorage.setItem('bookStoreData', JSON.stringify(this.data));
   }
 
