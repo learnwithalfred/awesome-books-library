@@ -1,6 +1,6 @@
 /* eslint-disable max-classes-per-file */
 
-import initialData from './data.js';
+import initialData from './assets/js/data.js';
 
 const form = document.querySelector('#form');
 const title = document.querySelector('#title');
