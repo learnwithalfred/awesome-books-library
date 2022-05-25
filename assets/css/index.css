@@ -7,13 +7,11 @@
   margin: auto;
 }
 
-/* .BookCollection {
-  display: none;
-} */
 li {
   list-style-type: none;
   text-decoration: none;
 }
+
 a {
   text-decoration: none;
 }
@@ -47,7 +45,6 @@ hr {
 }
 
 .addBooks {
-  /* display: none; */
   width: 50%;
   margin: auto;
   flex-direction: column;

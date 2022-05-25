@@ -15,8 +15,7 @@ const contactRoute = document.querySelector('#contact-route');
 // generate unique id
 const generateId = (length = 10) => {
   let result = '';
-  const characters =
-    'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+  const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
   const charactersLength = characters.length;
   for (let i = 0; i < length; i += 1) {
     result += characters.charAt(Math.floor(Math.random() * charactersLength));
@@ -111,41 +110,3 @@ contactRoute.addEventListener('click', () => {
   formSection.classList.add('d-none');
   contactInfoSection.classList.remove('d-none');
 });
-
-/* for hiding and displaying sections */
-
-// eslint-disable-next-line no-unused-vars
-// function display(section) {
-//   alert('hi');
-//   const BookList = document.getElementById('BookCollection');
-//   const Form = document.getElementById('addBooks');
-//   const Contact = document.getElementById('Contactinfo');
-//   const heading = document.getElementById('title');
-
-//   switch (section) {
-//     case 'Bookcollection':
-//       BookList.style.display = 'block';
-//       Form.style.display = 'none';
-//       Contact.style.display = 'none';
-//       heading.innerHTML = 'All Awesome Books';
-//       break;
-
-//     case 'addBooks':
-//       alert('hi');
-//       BookList.style.display = 'none';
-//       Form.style.display = 'flex';
-//       Contact.style.display = 'none';
-//       heading.innerHTML = 'Add a New Book';
-//       break;
-
-//     case 'Contactinfo':
-//       BookList.style.display = 'none';
-//       Form.style.display = 'none';
-//       Contact.style.display = 'block';
-//       heading.innerHTML = 'Contact Information';
-//       break;
-
-//     default:
-//       break;
-//   }
-// }
