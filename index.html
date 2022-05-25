@@ -32,6 +32,7 @@
           </ul>
         </nav>
       </div>
+      <span class="date"></span>
     </header>
 
     <section class="home">
@@ -43,9 +44,10 @@
         <ul class="book-list"></ul>
       </div>
 
-      <hr />
       <div class="form" id="form-section">
-        <h2 class="form-header">Add a new Book</h2>
+        <div class="header">
+          <h1>Form Header</h1>
+        </div>
         <form id="form" method="post" action="/">
           <input
             placeholder="Title"
@@ -66,14 +68,21 @@
       </div>
 
       <div id="contact-info-section">
+        <div class="header">
+          <h1>Contact Information</h1>
+        </div>
         <p>
           If you have any questions or you just want to say "Hello". You can
           reach us to.
         </p>
         <ul>
-          <li>Our email: <a href="#">mail@mail.com</a></li>
-          <li>Our twitter: <a href="#">@awesomeBooks</a></li>
-          <li>Our github: <a href="#">@awesomeBooks</a></li>
+          <li class="social-links">Our email: <a href="#">mail@mail.com</a></li>
+          <li class="social-links">
+            Our twitter: <a href="#">@awesomeBooks</a>
+          </li>
+          <li class="social-links">
+            Our github: <a href="#">@awesomeBooks</a>
+          </li>
         </ul>
       </div>
     </section>

@@ -11,11 +11,12 @@ const contactInfoSection = document.querySelector('#contact-info-section');
 const booksRoute = document.querySelector('#books-route');
 const addNewRoute = document.querySelector('#add-new-route');
 const contactRoute = document.querySelector('#contact-route');
-
+const date = document.querySelector('.date');
 // generate unique id
 const generateId = (length = 10) => {
   let result = '';
-  const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+  const characters =
+    'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
   const charactersLength = characters.length;
   for (let i = 0; i < length; i += 1) {
     result += characters.charAt(Math.floor(Math.random() * charactersLength));
@@ -110,3 +111,13 @@ contactRoute.addEventListener('click', () => {
   formSection.classList.add('d-none');
   contactInfoSection.classList.remove('d-none');
 });
+
+const currentDate = new Date();
+
+const options = {
+  weekday: 'long',
+  year: 'numeric',
+  month: 'short',
+  day: 'numeric',
+};
+date.innerText = currentDate.toLocaleDateString('en-us', options);
