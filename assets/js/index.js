@@ -28,6 +28,7 @@ class BookList {
     this.data = [];
   }
 
+  // add book
   addBook(book) {
     this.data.push(book);
     localStorage.setItem('bookStoreData', JSON.stringify(this.data));
