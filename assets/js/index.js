@@ -5,7 +5,13 @@ import initialData from './data.js';
 const form = document.querySelector('#form');
 const title = document.querySelector('#title');
 const author = document.querySelector('#author');
-
+const bookListSection = document.querySelector('#book-list-section');
+const formSection = document.querySelector('#form-section');
+const contactInfoSection = document.querySelector('#contact-info-section');
+const booksRoute = document.querySelector('#books-route');
+const addNewRoute = document.querySelector('#add-new-route');
+const contactRoute = document.querySelector('#contact-route');
+const date = document.querySelector('.date');
 // generate unique id
 const generateId = (length = 10) => {
   let result = '';
@@ -22,10 +28,11 @@ class BookList {
     this.data = [];
   }
 
+  // add book
   addBook(book) {
     this.data.push(book);
     title.value = '';
-    author.value=''
+    author.value = '';
     localStorage.setItem('bookStoreData', JSON.stringify(this.data));
   }
 
@@ -50,6 +57,8 @@ const booksData = new BookList();
 function displayBooks(book) {
   const ul = document.querySelector('.book-list');
   const li = document.createElement('li');
+  ul.classList.add('list-container');
+
   li.classList.add('list');
   li.setAttribute('id', book.id);
   li.innerText = `${book.title} by ${book.author}`;
@@ -66,6 +75,9 @@ form.addEventListener('submit', (e) => {
     const newBook = new Book(title.value, author.value);
     booksData.addBook(newBook);
     displayBooks(newBook);
+    bookListSection.classList.remove('d-none');
+    formSection.classList.add('d-none');
+    contactInfoSection.classList.add('d-none');
   }
   return false;
 });
@@ -80,3 +92,34 @@ window.onload = () => {
 
   booksData.data.forEach((book) => displayBooks(book));
 };
+
+formSection.classList.add('d-none');
+contactInfoSection.classList.add('d-none');
+
+booksRoute.addEventListener('click', () => {
+  bookListSection.classList.remove('d-none');
+  formSection.classList.add('d-none');
+  contactInfoSection.classList.add('d-none');
+});
+
+addNewRoute.addEventListener('click', () => {
+  bookListSection.classList.add('d-none');
+  formSection.classList.remove('d-none');
+  contactInfoSection.classList.add('d-none');
+});
+
+contactRoute.addEventListener('click', () => {
+  bookListSection.classList.add('d-none');
+  formSection.classList.add('d-none');
+  contactInfoSection.classList.remove('d-none');
+});
+
+const currentDate = new Date();
+
+const options = {
+  weekday: 'long',
+  year: 'numeric',
+  month: 'short',
+  day: 'numeric',
+};
+date.innerText = currentDate.toLocaleDateString('en-us', options);

@@ -1,45 +1,58 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 .home {
   width: 70%;
   margin: auto;
 }
 
+header {
+  margin: 10px;
+}
+
 .header {
   margin: auto;
+  margin-top: 2rem;
 }
 
 li {
   list-style-type: none;
+  text-decoration: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.list {
   display: flex;
   justify-content: space-between;
   padding: 0.3rem;
   background-color: rgb(168, 168, 168);
 }
 
-li:nth-child(even) {
+.list:nth-child(even) {
   background-color: #fff;
 }
 
-ul {
+.list-container {
   border: 2px solid #000;
   padding: 0;
-}
-
-hr {
-  width: 10%;
-  margin-top: 2rem;
-  border-top: 2px solid rgb(0, 0, 0);
 }
 
 .header h1 {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin: 60px 0 20px 0;
 }
 
-.form {
+.addBooks {
   width: 50%;
   margin: auto;
-  display: flex;
   flex-direction: column;
 }
 
@@ -56,6 +69,46 @@ input[type='submit'] {
 }
 
 .form-header {
+  margin-top: 2rem;
   display: flex;
   justify-content: center;
+}
+
+.heading {
+  border: 3px solid #000;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  height: 20px;
+  text-align: center;
+}
+
+.navbar {
+  display: flex;
+  gap: 15px;
+}
+
+.d-none {
+  display: none;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  background-color: darkgray;
+  width: 100%;
+  padding: 20px;
+}
+
+.date {
+  padding-top: 0.5rem;
+  float: right;
+}
+
+.social-links {
+  list-style-type: disc;
+  margin-left: 50px;
+  padding-top: 20px;
 }
