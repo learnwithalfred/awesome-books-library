@@ -5,11 +5,18 @@ import initialData from './data.js';
 const form = document.querySelector('#form');
 const title = document.querySelector('#title');
 const author = document.querySelector('#author');
+const bookListSection = document.querySelector('#book-list-section');
+const formSection = document.querySelector('#form-section');
+const contactInfoSection = document.querySelector('#contact-info-section');
+const booksRoute = document.querySelector('#books-route');
+const addNewRoute = document.querySelector('#add-new-route');
+const contactRoute = document.querySelector('#contact-route');
 
 // generate unique id
 const generateId = (length = 10) => {
   let result = '';
-  const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+  const characters =
+    'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
   const charactersLength = characters.length;
   for (let i = 0; i < length; i += 1) {
     result += characters.charAt(Math.floor(Math.random() * charactersLength));
@@ -48,6 +55,8 @@ const booksData = new BookList();
 function displayBooks(book) {
   const ul = document.querySelector('.book-list');
   const li = document.createElement('li');
+  ul.classList.add('list-container');
+
   li.classList.add('list');
   li.setAttribute('id', book.id);
   li.innerText = `${book.title} by ${book.author}`;
@@ -64,6 +73,9 @@ form.addEventListener('submit', (e) => {
     const newBook = new Book(title.value, author.value);
     booksData.addBook(newBook);
     displayBooks(newBook);
+    bookListSection.classList.remove('d-none');
+    formSection.classList.add('d-none');
+    contactInfoSection.classList.add('d-none');
   }
   return false;
 });
@@ -79,39 +91,61 @@ window.onload = () => {
   booksData.data.forEach((book) => displayBooks(book));
 };
 
+formSection.classList.add('d-none');
+contactInfoSection.classList.add('d-none');
+
+booksRoute.addEventListener('click', () => {
+  bookListSection.classList.remove('d-none');
+  formSection.classList.add('d-none');
+  contactInfoSection.classList.add('d-none');
+});
+
+addNewRoute.addEventListener('click', () => {
+  bookListSection.classList.add('d-none');
+  formSection.classList.remove('d-none');
+  contactInfoSection.classList.add('d-none');
+});
+
+contactRoute.addEventListener('click', () => {
+  bookListSection.classList.add('d-none');
+  formSection.classList.add('d-none');
+  contactInfoSection.classList.remove('d-none');
+});
+
 /* for hiding and displaying sections */
 
 // eslint-disable-next-line no-unused-vars
-function display(section) {
-  alert("hi");
-  const BookList = document.getElementById('BookCollection');
-  const Form = document.getElementById('addBooks');
-  const Contact = document.getElementById('Contactinfo');
-  const heading = document.getElementById('title');
+// function display(section) {
+//   alert('hi');
+//   const BookList = document.getElementById('BookCollection');
+//   const Form = document.getElementById('addBooks');
+//   const Contact = document.getElementById('Contactinfo');
+//   const heading = document.getElementById('title');
 
-  switch (section) {
-    case 'Bookcollection':
-      BookList.style.display = 'block';
-      Form.style.display = 'none';
-      Contact.style.display = 'none';
-      heading.innerHTML = 'All Awesome Books';
-      break;
+//   switch (section) {
+//     case 'Bookcollection':
+//       BookList.style.display = 'block';
+//       Form.style.display = 'none';
+//       Contact.style.display = 'none';
+//       heading.innerHTML = 'All Awesome Books';
+//       break;
 
-    case 'addBooks':
-      alert("hi");
-      BookList.style.display = 'none';
-      Form.style.display = 'flex';
-      Contact.style.display = 'none';
-      heading.innerHTML = 'Add a New Book';
-      break;
+//     case 'addBooks':
+//       alert('hi');
+//       BookList.style.display = 'none';
+//       Form.style.display = 'flex';
+//       Contact.style.display = 'none';
+//       heading.innerHTML = 'Add a New Book';
+//       break;
 
-    case 'Contactinfo':
-      BookList.style.display = 'none';
-      Form.style.display = 'none';
-      Contact.style.display = 'block';
-      heading.innerHTML = 'Contact Information';
-      break;
+//     case 'Contactinfo':
+//       BookList.style.display = 'none';
+//       Form.style.display = 'none';
+//       Contact.style.display = 'block';
+//       heading.innerHTML = 'Contact Information';
+//       break;
 
-    default: break;
-  }
-}
+//     default:
+//       break;
+//   }
+// }
