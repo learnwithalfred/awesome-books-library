@@ -7,7 +7,11 @@
   margin: auto;
 }
 
-li {
+.BookCollection{
+  display: none;
+}
+
+li{
   list-style-type: none;
   display: flex;
   justify-content: space-between;
@@ -36,10 +40,10 @@ hr {
   align-items: center;
 }
 
-.form {
+.addBooks {
+  display:none;
   width: 50%;
   margin: auto;
-  display: flex;
   flex-direction: column;
 }
 
@@ -58,4 +62,20 @@ input[type='submit'] {
 .form-header {
   display: flex;
   justify-content: center;
+}
+
+.heading {
+  border: 3px solid #000;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  height: 20px;
+  text-align: center
+}
+
+.navbar{   
+  display: flex;
+  gap: 15px;
 }

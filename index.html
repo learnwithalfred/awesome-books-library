@@ -10,19 +10,56 @@
       content="Awesome books is a simple website that displays a list of books and allows you to add and remove books from that list. By building this application, we will learn how to manage data using JavaScript. Thanks to that our website will be more interactive. We will also use a medium-fidelity wire-frame to build the UI."
     />
     <link rel="icon" type="image/png" href="assets/img/favicon.png" />
-    <title>Awesome Books - Index Page</title>
+    <title id="title">Awesome Books - Index Page</title>
   </head>
   <body>
+      <header>
+        <div class="heading">
+          <h2 class="heading-title">Awesome books</h2>
+          <nav>
+            <ul class="navbar">
+              <li>
+                <a href="#" id="allBooks" onclick="display('BookCollection')">
+                  List
+                </a>
+              </li>
+              <li>
+      
+                |
+      
+              </li>
+              <li>
+                <a href="#" id="newBook" onclick="display('addBooks')">
+                  Add New
+                </a>
+              </li>
+              <li>
+      
+                |
+      
+              </li>
+              <li>
+                <a href="#" id="Contact" onclick="display('Contactinfo')">
+                  Contact
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+
+
     <section class="home">
+      <div id="BookCollection" class="BookCollection">
       <div class="header">
         <h1>All Awesome Books </h1>
       </div>
 
-      <ul class="book-list"></ul>
+      <ul class="book-list"></ul></div>
       <hr />
-      <div class="form">
+      <div class="addBooks" id="addBooks">
         <h2 class="form-header">Add a new Book</h2>
-        <form id="form" action="/">
+        <form>
           <input placeholder="Title" type="text" required name="title" id="title" />
           <input placeholder="Author" type="text" required name="author" id="author" />
           <input type="submit" value="Add" id="add-button" />
