@@ -1,6 +1,6 @@
 /* eslint-disable max-classes-per-file */
 
-import initialData from './assets/js/data.js';
+import initialData from './data.js';
 
 const form = document.querySelector('#form');
 const title = document.querySelector('#title');
@@ -32,7 +32,7 @@ class BookList {
   addBook(book) {
     this.data.push(book);
     title.value = '';
-    author.value=''
+    author.value = '';
     localStorage.setItem('bookStoreData', JSON.stringify(this.data));
   }
 
