@@ -26,31 +26,6 @@
 - Change directory into the project folder
 - Open project with text editor to view changes
 
-### Install
-
-- Install dev dependencies
-- If you are using vscode text editor, you can install [Live Sass Compiler](https://marketplace.visualstudio.com/items?itemName=ritwickdey.live-sass)
-  - Then update your location of SCSS main file in `vscode` > `settings.json` file.
-  ```
-  "liveSassCompile.settings.formats": [
-    {
-      "format": "expanded",
-      "extensionName": ".css",
-      "savePath": "/dist/css"
-    }
-  ],
-  ```
-- Please make sure you are compiling scss to see the styles working
-
-- Run the code using [live server](https://www.google.com/search?client=safari&rls=en&q=live+server&ie=UTF-8&oe=UTF-8)
-
-## Live Demo (if available)
-
-[Live Demo Link](https://livedemo.com)
-
-### Run tests
-
-### Deployment
 
 ## Authors
 

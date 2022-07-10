@@ -1,4 +1,118 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+}
+
+.home {
+  width: 50%;
+  margin: auto;
+}
+
+header {
+  margin: 10px;
+}
+
+.header {
+  margin: auto;
+  margin-top: 2rem;
+}
+
+li {
+  list-style-type: none;
+  text-decoration: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.list {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  background-color: rgb(168, 168, 168);
+  font-size: 1.2rem;
+
+}
+
+.list:nth-child(even) {
+  background-color: #fff;
+}
+
+.list-container {
+  border: 2px solid #000;
+  padding: 0;
+}
+
+.header h1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 60px 0 20px 0;
+}
+
+.addBooks {
+  width: 50%;
+  margin: auto;
+  flex-direction: column;
+}
+
+input[type='text'] {
+  width: 100%;
+  padding: 1rem;
+  margin-top: 0.3rem;
+  color: #000;
+}
+
+input[type='submit'] {
+  float: right;
+  margin: 0.3rem 0;
+  padding: 1rem;
+  cursor: pointer;
+}
+
+.form-header {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+}
+
+.heading {
+  border: 3px solid #000;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  height: 20px;
+  text-align: center;
+}
+
+.navbar {
+  display: flex;
+  gap: 15px;
+}
+
+.d-none {
+  display: none;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  background-color: darkgray;
+  width: 100%;
+  padding: 20px;
+}
+
+.date {
+  padding-top: 0.5rem;
+  float: right;
+}
+
+.social-links {
+  list-style-type: disc;
+  margin-left: 50px;
+  padding-top: 20px;
 }
