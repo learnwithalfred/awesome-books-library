@@ -10,6 +10,7 @@
     "type": "git",
     "url": "git+https://github.com/learnwithalfred/awesome-books-library.git"
   },
+  "type": "module",
   "keywords": [
     "Books",
     "awesome",
