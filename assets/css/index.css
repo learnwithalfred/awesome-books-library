@@ -5,7 +5,7 @@
 }
 
 .home {
-  width: 70%;
+  width: 50%;
   margin: auto;
 }
 
@@ -30,8 +30,9 @@ a {
 .list {
   display: flex;
   justify-content: space-between;
-  padding: 0.3rem;
+  padding: 1rem;
   background-color: rgb(168, 168, 168);
+  font-size: 1.2rem;
 }
 
 .list:nth-child(even) {
@@ -58,7 +59,7 @@ a {
 
 input[type='text'] {
   width: 100%;
-  padding: 0.3rem 0;
+  padding: 1rem;
   margin-top: 0.3rem;
   color: #000;
 }
@@ -66,6 +67,8 @@ input[type='text'] {
 input[type='submit'] {
   float: right;
   margin: 0.3rem 0;
+  padding: 1rem;
+  cursor: pointer;
 }
 
 .form-header {
