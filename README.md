@@ -14,17 +14,20 @@
 
 **To get a local copy up and running follow these simple example steps.**
 
-### Prerequisites
+## Prerequisites
 
 - Node
 - Git
 - Code Editor
 
-### Setup
+## Setup
 
 - Clone the repository
 - Change directory into the project folder
 - Open project with text editor to view changes
+
+## Live Link
+[Demo link](https://learnwithalfred.github.io/awesome-books-library/#)
 
 
 ## Authors
